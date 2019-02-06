@@ -31,13 +31,19 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'users.apps.UsersConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    #3rd party apps
+    'crispy_forms',
+
+    #local
+    'pages.apps.PagesConfig',
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
@@ -127,3 +133,5 @@ AUTH_USER_MODEL = 'users.CustomUser'
 LOGIN_REDIRECT_URL = 'home'
 
 LOGOUT_REDIRECT_URL = 'home'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
